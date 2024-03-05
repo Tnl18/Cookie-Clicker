@@ -1,5 +1,15 @@
-function socorro(){
-    window.alert("o forninho caiu!")
-}
+// Constants
+const a = document.querySelector('audio');
+const p = document.querySelector('p');
 
-document.body.addEventListener('click', socorro);
+// Variable
+let clicks = 0;
+
+// Function
+function score (){
+    a.currentTime = 0;
+    a.play();
+
+    clicks = clicks +1;
+    p.innerHTML = clicks;
+}
